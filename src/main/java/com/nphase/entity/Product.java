@@ -6,11 +6,13 @@ public class Product {
     private final String name;
     private final BigDecimal pricePerUnit;
     private final int quantity;
+    private Category category;
 
-    public Product(String name, BigDecimal pricePerUnit, int quantity) {
+    public Product(String name, BigDecimal pricePerUnit, int quantity, Category category) {
         this.name = name;
         this.pricePerUnit = pricePerUnit;
         this.quantity = quantity;
+		this.setCategory(category);
     }
 
     public String getName() {
@@ -24,4 +26,12 @@ public class Product {
     public int getQuantity() {
         return quantity;
     }
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 }
